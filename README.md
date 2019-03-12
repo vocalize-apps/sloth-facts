@@ -1,5 +1,5 @@
-# 🦥 Sloth Facts 
-An Alexa skill that gives interesting facts about endangered species and attempts to bring more attention to them.
+# Sloth Facts 
+An Alexa skill that gives interesting facts about sloths.
 
 [![Enable This Skill](https://dabuttonfactory.com/button.png?t=Enable+This+Skill&f=Calibri-Bold&ts=24&tc=fff&tshs=1&tshc=000&hp=20&vp=8&c=5&bgt=gradient&bgc=0ff&ebgc=187cd8&shs=1&shc=444&sho=s)](http://bit.ly/ALEXAESF)
 
@@ -7,11 +7,11 @@ An Alexa skill that gives interesting facts about endangered species and attempt
 
 ## Usage
 
-> "Alexa, ask super sloth facts to tell me a fact"
+> "Alexa, open sloth facts"
 
-> "Alexa, tell super sloth facts to tell me a fact"
+> "Tell me a random fact"
 
-> "Alexa, open super sloth facts"
+> "Tell me a two toed sloth fact"
 
 # :smiley_cat: Installation
 You will need to complete the prerequisites below before creating the skill and deploying the fulfillment handler.
