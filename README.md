@@ -1,9 +1,7 @@
 # Sloth Facts 
 An Alexa skill that gives interesting facts about sloths.
 
-[![Enable This Skill](https://dabuttonfactory.com/button.png?t=Enable+This+Skill&f=Calibri-Bold&ts=24&tc=fff&tshs=1&tshc=000&hp=20&vp=8&c=5&bgt=gradient&bgc=0ff&ebgc=187cd8&shs=1&shc=444&sho=s)](http://bit.ly/ALEXAESF)
-
-## :wave: [Contribute interesting facts here](https://airtable.com/shrKoriHZsn3tz9qU)
+[![Enable This Skill](https://dabuttonfactory.com/button.png?t=Enable+This+Skill&f=Calibri-Bold&ts=24&tc=fff&tshs=1&tshc=000&hp=20&vp=8&c=5&bgt=gradient&bgc=0ff&ebgc=187cd8&shs=1&shc=444&sho=s)](https://www.amazon.com/dp/B07PN3ZJVY/ref=sr_1_3?keywords=sloth+facts&qid=1552429215&s=digital-skills&sr=1-3)
 
 ## Usage
 
