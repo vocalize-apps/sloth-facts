@@ -67,6 +67,19 @@
                 {
                     "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
+                },
+                {
+                    "name": "GetSpecificSpeciesFact",
+                    "slots": [
+                        {
+                            "name": "species",
+                            "type": "AMAZON.Animal"
+                        }
+                    ],
+                    "samples": [
+                        "get me a {species} fact",
+                        "tell me a {species} fact"
+                    ]
                 }
             ],
             "types": []
