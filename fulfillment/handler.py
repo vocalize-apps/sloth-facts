@@ -19,12 +19,12 @@ from ask_sdk_model import Response
 # =========================================================================================================================================
 
 
-SKILL_NAME = "Endangered Species Facts"
+SKILL_NAME = "Sloth Facts"
 GET_FACT_MESSAGE = "Here's your fact:"
-HELP_MESSAGE = "You can say tell me a Endangered Species fact, how many species are endangered, or, you can say exit... What can I help you with?"
+HELP_MESSAGE = "You can say tell me a random fact, tell me a (type of sloth) fact, or, you can say exit... What can I help you with?"
 HELP_REPROMPT = "What can I help you with?"
 STOP_MESSAGE = "Goodbye!"
-FALLBACK_MESSAGE = "The Endangered Species Facts skill can't help you with that.  It can help you discover facts about endangered species if you say tell me an endangered species fact. What can I help you with?"
+FALLBACK_MESSAGE = "The Sloth Facts skill can't help you with that.  It can help you discover facts about sloths if you say tell me a sloth fact. What can I help you with?"
 FALLBACK_REPROMPT = 'What can I help you with?'
 EXCEPTION_MESSAGE = "Sorry. I cannot help you with that."
 
@@ -39,12 +39,12 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
-def get_random_yes_no_question():
+def get_random_yes_no_question(type):
     """Return random question for YES/NO answering."""
     questions = [
-        "Would you like another fact?", "Can I tell you another fact?",
-        "Do you want to hear another fact?"]
-    return random.choice(questions)
+        "Would you like another {} fact?", "Can I tell you another {} fact?",
+        "Do you want to hear another {} fact?"]
+    return random.choice(questions).format(type)
 
 
 def get_random_goodbye():
@@ -62,9 +62,10 @@ class LaunchRequestHandler(AbstractRequestHandler):
          # type: (HandlerInput) -> Response
          speech_text = f"Welcome to {SKILL_NAME}. " + HELP_MESSAGE
 
-         handler_input.response_builder.speak(speech_text).set_card(
-            SimpleCard(SKILL_NAME, speech_text)).set_should_end_session(
-            False)
+         handler_input.response_builder.speak(
+             speech_text).set_card(
+                 SimpleCard(SKILL_NAME, speech_text)
+                 ).set_should_end_session(False)
          return handler_input.response_builder.response
 
          
@@ -72,17 +73,19 @@ class GetRandomFactHandler(AbstractRequestHandler):
     """Handler for GetRandomFact Intent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return is_intent_name("GetRandomFactIntent")(handler_input)
+        return is_intent_name("GetRandomFact")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
         logger.info("In GetRandomFactHandler")
+        handler_input.attributes_manager.session_attributes['lastIntent'] = 'GetRandomFact'
         
         with open('./fulfillment/data/data.json') as f:
             data = json.loads(f.read())
         
-        while True:
-            fact = random.choice(data[random.choice(list(data))]['Facts'])
+        while 1:
+            species = random.choice(list(data))
+            fact = random.choice(data[species]['Facts'])
             if fact:
                 break
             else:
@@ -91,37 +94,47 @@ class GetRandomFactHandler(AbstractRequestHandler):
         speech = "{intro} {fact} {reprompt}".format(
             intro=GET_FACT_MESSAGE, 
             fact=fact, 
-            reprompt=get_random_yes_no_question())
+            reprompt=get_random_yes_no_question("random"))
 
         handler_input.response_builder.speak(speech).set_card(
-            SimpleCard(SKILL_NAME, fact)).set_should_end_session(
+            SimpleCard(species.title(), fact)).set_should_end_session(
             False)
         return handler_input.response_builder.response
 
 
-class GetNumberOfEndangeredSpeciesHandler(AbstractRequestHandler):
-    """Handler for GetNumberOfEndangeredSpecies Intent."""
+class GetSpecificSpeciesFactHandler(AbstractRequestHandler):
+    """Handler for GetSpecificSpeciesFact Intent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return is_intent_name("GetNumberOfEndangeredSpecies")(handler_input)
+        return is_intent_name("GetSpecificSpeciesFact")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        logger.info("In GetNumberOfEndangeredSpeciesHandler")
+        logger.info("In GetSpecificSpeciesFactHandler")
+        handler_input.attributes_manager.session_attributes['lastIntent'] = 'GetSpecificSpeciesFact'
+
+        try:
+            requested_species = handler_input.request_envelope.request.intent.slots["species"].value
+            handler_input.attributes_manager.session_attributes['requestedSpecies'] = requested_species
+        except:
+            requested_species = handler_input.attributes_manager.session_attributes['requestedSpecies']
         
         with open('./fulfillment/data/data.json') as f:
             data = json.loads(f.read())
         
-        species = [species for species in data]
-        num_species = len(species)
-        critical_num = sum(1 for animal in species if data[animal]['Conservation Status']=="Critically Endangered (CR)")
+        fact = random.choice(data[requested_species]['Facts'])
+        if fact:
+            pass
+        else:
+            fact = "We currently have no facts for that species."
 
-        speech = "There are currently {number} endangered species. {critical_num} of which are critically endangered.".format(
-            number=num_species,
-            critical_num=critical_num)
+        speech = "{intro} {fact} {reprompt}".format(
+            intro=GET_FACT_MESSAGE, 
+            fact=fact, 
+            reprompt=get_random_yes_no_question(requested_species))
 
         handler_input.response_builder.speak(speech).set_card(
-            SimpleCard(SKILL_NAME, num_species)).set_should_end_session(
+            SimpleCard(requested_species.title(), fact)).set_should_end_session(
             False)
         return handler_input.response_builder.response
 
@@ -136,7 +149,12 @@ class YesHandler(AbstractRequestHandler):
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
         logger.info("In YesHandler")
-        return GetRandomFactHandler().handle(handler_input)
+
+        intent = handler_input.attributes_manager.session_attributes['lastIntent']
+        if intent == "GetRandomFact":
+            return GetRandomFactHandler().handle(handler_input)
+        elif intent == "GetSpecificSpeciesFact":
+            return GetSpecificSpeciesFactHandler().handle(handler_input)
 
 
 class NoHandler(AbstractRequestHandler):
@@ -256,7 +274,7 @@ class ResponseLogger(AbstractResponseInterceptor):
 
 # Register intent handlers
 sb.add_request_handler(GetRandomFactHandler())
-sb.add_request_handler(GetNumberOfEndangeredSpeciesHandler())
+sb.add_request_handler(GetSpecificSpeciesFactHandler())
 sb.add_request_handler(LaunchRequestHandler())
 sb.add_request_handler(YesHandler())
 sb.add_request_handler(NoHandler())
