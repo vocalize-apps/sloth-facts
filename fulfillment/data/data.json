@@ -1,5 +1,5 @@
 {
-  "Two toed Sloths": {
+  "two toed sloth": {
     "Facts": [
       "The two toed sloth is generally much faster than the three toed sloth.",
       "Two toed sloths actually have three toes. They do have two fingers however!",
@@ -10,12 +10,9 @@
       "Sloths are surprisingly fantastic swimmers.",
       "Two toed sloths are bigger than three toed sloths",
       "The average lifespan for a two toed sloth is 10 to 12 years in the wild, but in captivity can live to even 30 years."
-    ],
-    "Scientific Name": "Choloepus",
-    "Conservation Status": "Least concern (LC)",
-    "More Info": "https://www.worldwildlife.org/species/sloth"
+    ]
   },
-  "Three toed Sloths": {
+  "three toed sloth": {
     "Facts": [
       "The sloth is the world's slowest mammal, so sedentary that algae grows on its furry coat. The plant gives it a greenish tint that is useful camouflage in the trees of its Central and South American rain forest home.",
       "With such a slow metabolism, sloths must sunbathe in order to keep their body temperature up.",
@@ -30,12 +27,9 @@
       "There are three main types of three toed sloths. The Pygmy three-toed sloth (Bradypus pygmaeus), the Maned sloth (Bradypus torquatus), the Pale-throated sloth (Bradypus tridactylus), and the Brown-throated sloth (Bradypus variegatus).",
       "Of the three main types of three toed sloths, the pygmy three-toed sloth is critically endangered, and the maned sloth is vulnerable.",
       "Deforestation caused by humans is the predominant reason three toed sloth populations are declining."
-    ],
-    "Scientific Name": "Bradypus",
-    "Conservation Status": "Endangered (EN)",
-    "More Info": "https://www.worldwildlife.org/species/sloth"
+    ]
   },
-  "Giant Ground Sloth": {
+  "giant ground sloth": {
     "Facts": [
       "The largest giant ground sloths were elephant-sized.",
       "Most giant ground sloths walked on the sides of their feet.",
@@ -47,9 +41,5 @@
       "Your average ground sloth was—in all likelihood—a browsing herbivore, pulling down tree branches with its strong forelimbs. However, the mylodontids may have also gathered food by digging for it.",
       "The Caribbean islands seem like an unlikely place for ground sloths to have made their last stand—but that’s exactly where it happened. Mainland North America lost all of its indigenous species around 11,000 years ago, and half a millennium later, South America, too, became a ground sloth-free continent.",
       "Megaloncus rodens was the last ground sloth standing: Radiocarbon dating indicates that this 200-pound vegetarian waddled across Cuba as recently as 4200 years ago."
-    ],
-    "Scientific Name": "Megatherium",
-    "Conservation Status": "Extinct (EX)",
-    "More Info": "https://www.slothsanctuary.com/about-sloths/giant-ground-sloth"
-  }
+    ]
 }
