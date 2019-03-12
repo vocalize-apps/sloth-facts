@@ -1,0 +1,55 @@
+{
+  "Two toed Sloths": {
+    "Facts": [
+      "The two toed sloth is generally much faster than the three toed sloth.",
+      "Two toed sloths actually have three toes. They do have two fingers however!",
+      "Two toed sloths are predominantly nocturnal.",
+      "Two toed sloths spend most of their lives hanging on tree branches.",
+      "There are two species of two toed sloths. The Linnaeus’s two-toed sloth (Choloepus didactylus) and the Hoffman’s two-toed sloth (Choloepus hoffmanni)",
+      "While two toed sloths are able to survive in captivity, three toed sloths are not.",
+      "Sloths are surprisingly fantastic swimmers.",
+      "Two toed sloths are bigger than three toed sloths",
+      "The average lifespan for a two toed sloth is 10 to 12 years in the wild, but in captivity can live to even 30 years."
+    ],
+    "Scientific Name": "Choloepus",
+    "Conservation Status": "Least concern (LC)",
+    "More Info": "https://www.worldwildlife.org/species/sloth"
+  },
+  "Three toed Sloths": {
+    "Facts": [
+      "The sloth is the world's slowest mammal, so sedentary that algae grows on its furry coat. The plant gives it a greenish tint that is useful camouflage in the trees of its Central and South American rain forest home.",
+      "With such a slow metabolism, sloths must sunbathe in order to keep their body temperature up.",
+      "Brown-throated sloths have the ability to rotate their heads like owls. They have nine cervical vertebrae (the bones in the spine that support the head), as opposed to the seven that most mammals have.",
+      "Being the world’s slowest mammal, the sloth travels at a top speed of 0.24 kilometres per hour (0.15 mph).",
+      "Sloths sleep in trees – some 15 to 20 hours every day. Even when awake they often remain motionless.",
+      "Dead sloths have been known to retain their grip and remain suspended from a branch.",
+      "At night they eat leaves, shoots and fruit from the trees and get almost all of their water from juicy plants.",
+      "Although they are quite slow in trees, three-toed sloths are agile swimmers.",
+      "On land, sloths’ weak hind legs are not very powerful and their long claws are a hindrance. They cannot walk on all four limbs so they must use their front arms and claws to drag themselves across the rain forest floor.",
+      "They generally weigh almost 9 pounds, which is almost the same as a gallon of skim milk.",
+      "There are three main types of three toed sloths. The Pygmy three-toed sloth (Bradypus pygmaeus), the Maned sloth (Bradypus torquatus), the Pale-throated sloth (Bradypus tridactylus), and the Brown-throated sloth (Bradypus variegatus).",
+      "Of the three main types of three toed sloths, the pygmy three-toed sloth is critically endangered, and the maned sloth is vulnerable.",
+      "Deforestation caused by humans is the predominant reason three toed sloth populations are declining."
+    ],
+    "Scientific Name": "Bradypus",
+    "Conservation Status": "Endangered (EN)",
+    "More Info": "https://www.worldwildlife.org/species/sloth"
+  },
+  "Giant Ground Sloth": {
+    "Facts": [
+      "The largest giant ground sloths were elephant-sized.",
+      "Most giant ground sloths walked on the sides of their feet.",
+      "Some species of giant ground sloths had armor plates - similar to a few modern animals such as armadillos and crocodiles.",
+      "For giant ground sloths, standing up on two limbs required extra stability. They would use their tails as an extra leg to support its considerable body weight.",
+      "Currently, four different species of Megalonyx (giant ground sloths) are recognized; the most famous, Megalonyx jeffersonii, was named in Thomas Jefferson's honor.",
+      "Scientists have long speculated that humans killed and devoured ground sloths—but, for many years, there was no physical evidence to support this idea. Then, in 2008, incriminating scars were found on the femur of an Ohio Megalonyx.",
+      "Imagine a sloth that’s trying hard to be a marine iguana. You’ve just pictured a member of the Thalassocnus genus - seagoing ground sloth.",
+      "Your average ground sloth was—in all likelihood—a browsing herbivore, pulling down tree branches with its strong forelimbs. However, the mylodontids may have also gathered food by digging for it.",
+      "The Caribbean islands seem like an unlikely place for ground sloths to have made their last stand—but that’s exactly where it happened. Mainland North America lost all of its indigenous species around 11,000 years ago, and half a millennium later, South America, too, became a ground sloth-free continent.",
+      "Megaloncus rodens was the last ground sloth standing: Radiocarbon dating indicates that this 200-pound vegetarian waddled across Cuba as recently as 4200 years ago."
+    ],
+    "Scientific Name": "Megatherium",
+    "Conservation Status": "Extinct (EX)",
+    "More Info": "https://www.slothsanctuary.com/about-sloths/giant-ground-sloth"
+  }
+}

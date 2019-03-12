@@ -1,0 +1,75 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "sloth facts",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "exit",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetRandomFactIntent",
+                    "slots": [],
+                    "samples": [
+                        "a random fact",
+                        "tell me about sloths",
+                        "tell me a random fact",
+                        "a fact",
+                        "an sloth fact",
+                        "tell me a fact",
+                        "tell me a sloth fact",
+                        "give me a sloth fact",
+                        "give me a sloth fact",
+                        "tell me trivia",
+                        "tell me sloth trivia",
+                        "give me trivia",
+                        "give me an sloth trivia",
+                        "give me some information",
+                        "give me some sloth information",
+                        "tell me something",
+                        "give me something"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "yes",
+                        "sure",
+                        "okay"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "no",
+                        "nope"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}
